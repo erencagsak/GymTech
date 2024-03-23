@@ -6,7 +6,7 @@ import android.content.SharedPreferences.Editor
 import android.util.Log
 
 class SessionManager(private var _context : Context) {
-    private var pref:SharedPreferences = _context.getSharedPreferences(PREF_NAME,Context.MODE_PRIVATE)
+    private var pref: SharedPreferences = _context.getSharedPreferences(PREF_NAME,Context.MODE_PRIVATE)
     private var editor: SharedPreferences.Editor = pref.edit()
 
     internal var PRIVATE_MODE = 0
@@ -21,8 +21,6 @@ class SessionManager(private var _context : Context) {
 
         Log.d(TAG, "Kullanıcı girişi algılandı !")
     }
-
-
 
     companion object{
         private val TAG = SessionManager::class.java.simpleName

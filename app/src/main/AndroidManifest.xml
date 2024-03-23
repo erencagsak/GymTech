@@ -13,7 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".activity.LoginActivity"></activity>
+        <activity
+            android:name=".activity.LoginActivity"
+            android:theme="@style/Theme.GymTech" />
 
         <activity android:name=".SplashScreenActivity" android:exported="true">
             <intent-filter>

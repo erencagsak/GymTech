@@ -19,7 +19,7 @@
         app:srcCompat="@drawable/gymtech_logo" />
 
     <com.airbnb.lottie.LottieAnimationView
-        android:id="@+id/lottieAnimationView"
+        android:id="@+id/Loading"
         android:layout_width="254dp"
         android:layout_height="241dp"
         app:layout_constraintBottom_toBottomOf="parent"

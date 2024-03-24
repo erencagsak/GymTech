@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.util.Log
+import com.eren.gymtech.activity.AdminHomeActivity
 import com.eren.gymtech.activity.LoginActivity
 import com.eren.gymtech.databinding.ActivityMainBinding
 import com.eren.gymtech.global.DB
@@ -45,6 +46,16 @@ class SplashScreenActivity : AppCompatActivity() {
 
     // Splash Screen işlemi bitince gösterilecek ekranı seçer
     private val mRunnable: Runnable = Runnable {
+        if (session?.isLoggedIn == true){
+            val intent = Intent(this, AdminHomeActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
+        else{
+            val intent = Intent(this,LoginActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
         val intent = Intent(this,LoginActivity::class.java)
         startActivity(intent)
         finish()

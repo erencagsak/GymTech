@@ -2,8 +2,9 @@ package com.eren.gymtech.manager
 
 import android.content.Context
 import android.content.SharedPreferences
-import android.content.SharedPreferences.Editor
 import android.util.Log
+import android.widget.CheckBox
+import com.eren.gymtech.databinding.ActivityLoginBinding
 
 class SessionManager(private var _context : Context) {
     private var pref: SharedPreferences = _context.getSharedPreferences(PREF_NAME,Context.MODE_PRIVATE)
@@ -15,8 +16,7 @@ class SessionManager(private var _context : Context) {
     get() = pref.getBoolean(KEY_IS_LOGGED_IN, false)
 
     fun setLogin(isLoggedIn : Boolean){
-        editor.putBoolean(KEY_IS_LOGGED_IN, isLoggedIn)
-
+//        editor.putBoolean(KEY_IS_LOGGED_IN, isLoggedIn)
         editor.commit()
 
         Log.d(TAG, "Kullanıcı girişi algılandı !")

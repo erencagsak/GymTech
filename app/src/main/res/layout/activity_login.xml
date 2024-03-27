@@ -2,134 +2,143 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/login_background"
+    android:background="@drawable/login_screen_background"
     tools:context=".activity.LoginActivity">
 
     <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="181dp"
-        android:layout_height="152dp"
+        android:id="@+id/imageView"
+        android:layout_width="164dp"
+        android:layout_height="153dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.072"
-        app:srcCompat="@drawable/gymtech_logo" />
+        app:layout_constraintVertical_bias="0.05"
+        app:srcCompat="@drawable/gymtech_logo"
+        tools:ignore="ContentDescription" />
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="275dp"
-        android:layout_height="32dp"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:text="Giriş Yap"
+        android:layout_width="125dp"
+        android:layout_height="43dp"
+        android:text="@string/giris_yap"
         android:textColor="@color/white"
-        android:textSize="25sp"
-        android:textStyle="bold"
+        android:textSize="30sp"
+        android:fontFamily="sans-serif-condensed"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.29"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintVertical_bias="0.279" />
 
-    <EditText
-        android:id="@+id/Username"
-        android:layout_width="300dp"
-        android:layout_height="54dp"
-        android:background="@drawable/text_border"
-        android:hint="Kullanıcı adınızı giriniz..."
-        android:paddingLeft="20sp"
-        android:textColor="@color/white"
-        android:textColorHint="@color/white"
-        android:textSize="17sp"
-        android:textStyle="bold"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/LoginMail"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="357dp"
+        android:layout_height="67dp"
+        android:hint="@string/mail"
+        app:hintTextColor="@color/white"
+        android:textColorHint="@color/light_grey"
+        app:boxBackgroundColor="#7E57C2"
+        app:boxStrokeColor="@color/purple_500"
+        app:endIconMode="clear_text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.324"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.401"
-        tools:ignore="Autofill,HardcodedText,Textfields,MissingConstraints" />
+        app:layout_constraintVertical_bias="0.422"
+        app:startIconDrawable="@drawable/ic_person">
 
-    <EditText
-        android:id="@+id/Password"
-        android:layout_width="300dp"
-        android:layout_height="54dp"
-        android:background="@drawable/text_border"
-        android:hint="Şifrenizi giriniz..."
-        android:paddingLeft="20sp"
-        android:textColor="@color/white"
-        android:textColorHint="@color/white"
-        android:textSize="17sp"
-        android:textStyle="bold"
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="57dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/LoginPassword"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="357dp"
+        android:layout_height="67dp"
+        android:hint="@string/sifre"
+        app:hintTextColor="@color/white"
+        android:textColorHint="@color/light_grey"
+        app:boxBackgroundColor="#7E57C2"
+        app:boxStrokeColor="@color/purple_500"
+        app:endIconMode="password_toggle"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.324"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.512"
-        tools:ignore="Autofill,HardcodedText,Textfields,MissingConstraints" />
+        app:layout_constraintVertical_bias="0.567"
+        app:startIconDrawable="@drawable/ic_key">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="57dp"
+            android:inputType="textPassword"/>
+    </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/Login"
-        android:layout_width="125dp"
-        android:layout_height="57dp"
-        android:background="@drawable/text_border"
-        android:text="Giriş Yap"
+        android:id="@+id/LoginButton"
+        android:layout_width="218dp"
+        android:layout_height="49dp"
+        android:text="@string/giris_yap"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:background="#7E57C2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.626"
+        app:layout_constraintVertical_bias="0.741"
+        tools:ignore="UnusedAttribute" />
+
+    <TextView
+        android:id="@+id/forgotPassword"
+        android:layout_width="124dp"
+        android:layout_height="25dp"
+        android:text="@string/sifreni_mi_unuttun"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.905"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.641"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/RegisterButton"
+        android:layout_width="93dp"
+        android:layout_height="34dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:text="@string/kayit_ol"
+        android:textColor="@color/purple_200"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.764"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.858"
         tools:ignore="MissingConstraints" />
 
     <TextView
-        android:id="@+id/ForgotPassword"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Şifreni mi unuttun?"
-        android:textColor="@color/red"
-        android:textStyle="bold"
+        android:layout_width="138dp"
+        android:layout_height="28dp"
+        android:text="@string/hala_uye_degil_misin"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintHorizontal_bias="0.413"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.692" />
-
-    <com.airbnb.lottie.LottieAnimationView
-        android:id="@+id/login_username_tick"
-        android:layout_width="102dp"
-        android:layout_height="98dp"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.867"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.393"
-        app:lottie_autoPlay="true"
-        app:lottie_loop="true"
-        app:lottie_rawRes="@raw/login_password_tick"
+        app:layout_constraintVertical_bias="0.86"
         tools:ignore="MissingConstraints" />
 
-    <com.airbnb.lottie.LottieAnimationView
-        android:id="@+id/login_password_tick"
-        android:layout_width="102dp"
-        android:layout_height="98dp"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.867"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.511"
-        app:lottie_autoPlay="true"
-        app:lottie_loop="true"
-        app:lottie_rawRes="@raw/login_password_tick"
-        tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

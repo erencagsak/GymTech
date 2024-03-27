@@ -1,14 +1,12 @@
 package com.eren.gymtech.activity
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.eren.gymtech.databinding.ActivityAdminhomeBinding
+import androidx.appcompat.app.AppCompatActivity
+import com.eren.gymtech.R
 
 class AdminHomeActivity : AppCompatActivity() {
-    lateinit var binding: ActivityAdminhomeBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityAdminhomeBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        setContentView(R.layout.activity_admin_home)
     }
 }

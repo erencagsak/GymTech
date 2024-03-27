@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "907849036923",
-    "project_id": "gymtech-63c6d",
-    "storage_bucket": "gymtech-63c6d.appspot.com"
+    "project_number": "103895981218",
+    "project_id": "gym-tech-2cf4f",
+    "storage_bucket": "gym-tech-2cf4f.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:907849036923:android:edcc7235851d60f1d95ede",
+        "mobilesdk_app_id": "1:103895981218:android:e1033e6b6d4a4e32ba4bfb",
         "android_client_info": {
           "package_name": "com.eren.gymtech"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyCf-0wGcyWPEnYIuTzZ4hntkaixlTjcpb0"
+          "current_key": "AIzaSyBwTkVLphybSNc0W2059fggfAYSmD4IeWk"
         }
       ],
       "services": {

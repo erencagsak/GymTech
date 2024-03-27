@@ -1,155 +1,74 @@
 package com.eren.gymtech.activity
 
-import android.animation.Animator
 import android.content.Intent
 import android.os.Bundle
-import android.os.Handler
-import android.os.Looper
-import android.text.Editable
-import android.text.TextWatcher
-import android.util.Log
-import android.view.View
-import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.isInvisible
-import com.airbnb.lottie.LottieAnimationView
-import com.eren.gymtech.R
 import com.eren.gymtech.databinding.ActivityLoginBinding
-import com.eren.gymtech.global.DB
-import com.eren.gymtech.manager.SessionManager
-
+import com.google.firebase.auth.FirebaseAuth
 
 class LoginActivity : AppCompatActivity() {
-    var db : DB? = null
-    var session : SessionManager? = null
-
-    var username : EditText? = null
-    var password : EditText? = null
-    var passwordTick : LottieAnimationView? = null
-    lateinit var binding: ActivityLoginBinding
+    private val adminUid : String = "6xi3tLUz2aTJ3JfMezzAxKKmt9h1"
+    private lateinit var binding : ActivityLoginBinding
+    private lateinit var firebaseAuth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        db = DB(this)
-        session = SessionManager(this)
-        username = binding.Username
-        password = binding.Password
+        firebaseAuth = FirebaseAuth.getInstance()
 
-        binding.Login.setOnClickListener{
-            if (validDateLogin()){
-                getLogin()
+        // Giriş yap
+        login()
+
+        // Kayıt ol butonuna basınca, RegisterActivity'e git
+        registerPage()
+
+    }
+
+    // Giriş Yap - Firebase
+    private fun login(){
+        binding.LoginButton.setOnClickListener {
+            val mail = binding.LoginMail.editText?.text.toString()
+            val password = binding.LoginPassword.editText?.text.toString()
+
+            if (mail.isNotEmpty() && password.isNotEmpty()) {
+                firebaseAuth.signInWithEmailAndPassword(mail, password).addOnCompleteListener { task ->
+                    if (task.isSuccessful) {
+                        val currentUser = firebaseAuth.currentUser
+
+                        if (currentUser?.uid == adminUid)
+                        {
+                            Toast.makeText(this,"Giriş başarılı...",Toast.LENGTH_LONG).show()
+                            val adminIntent = Intent(this, AdminHomeActivity::class.java)
+                            startActivity(adminIntent)
+                        }
+                        else
+                        {
+                            Toast.makeText(this,"Giriş başarılı...",Toast.LENGTH_LONG).show()
+                            val userIntent = Intent(this,UserHomeActivity::class.java)
+                            startActivity(userIntent)
+                        }
+                    }
+                    else
+                    {
+                        Toast.makeText(this, "E-posta adresiniz ve/veya şifreniz hatalı.", Toast.LENGTH_SHORT).show()
+                    }
+                }
             }
-        }
-
-        // Yeşil tik kodları
-        login_username_tick()
-        login_password_tick()
-
-
-        binding.ForgotPassword.setOnClickListener{
-
+            else
+            {
+                Toast.makeText(this, "Mail veya şifre boş olamaz", Toast.LENGTH_SHORT).show()
+            }
         }
     }
 
-    private fun getLogin(){
-        try {
-            val sqlQuery = "SELECT * FROM ADMIN WHERE USER_NAME='"+username?.text.toString().trim()+"' AND PASSWORD = '"+password?.text.toString().trim()+"' AND ID = '1'"
-            db?.fireQuery(sqlQuery)?.use{
-                if (it.count > 0){
-                    session?.setLogin(true)
-                    Toast.makeText(this,"Başarıyla giriş yapıldı",Toast.LENGTH_LONG).show()
-                    val intent = Intent(this,AdminHomeActivity::class.java)
-                    startActivity(intent)
-                    finish()
-                }
-                else{
-                    session?.setLogin(false)
-                    Toast.makeText(this,"Giriş yapılamadı, lütfen daha sonra tekrar deneyiniz...",Toast.LENGTH_LONG).show()
-                }
-            }
+    // Kayıt olma ekranına yönlendir
+    private fun registerPage(){
+        binding.RegisterButton.setOnClickListener {
+            val intent = Intent(this,RegisterActivity::class.java)
+            startActivity(intent)
         }
-        catch (e : Exception){
-            e.printStackTrace()
-        }
-    }
-
-    private fun validDateLogin() : Boolean{
-        if (username?.text.toString().trim().isEmpty()){
-            Toast.makeText(this,"Kullanıcı adınızı giriniz...",Toast.LENGTH_LONG).show()
-            return false
-        }
-        else if(password?.text.toString().trim().isEmpty()){
-            Toast.makeText(this,"Şifrenizi giriniz...",Toast.LENGTH_LONG).show()
-            return false
-        }
-        return true
-    }
-
-    private fun login_username_tick(){
-        val animation_tick: EditText = findViewById(R.id.Username)
-        val animationView: LottieAnimationView = findViewById(R.id.login_username_tick)
-
-        var isAnimationPlaying = false // Animasyonun oynatılıp oynatılmadığını izlemek için bir değişken
-        val handler = Handler(Looper.getMainLooper())
-        animation_tick.addTextChangedListener(object : TextWatcher {
-            override fun beforeTextChanged(charSequence: CharSequence, i: Int, i1: Int, i2: Int) {}
-
-            override fun onTextChanged(charSequence: CharSequence, i: Int, i1: Int, i2: Int) {}
-
-            override fun afterTextChanged(editable: Editable) {
-                val isTextNotEmpty = editable.isNotEmpty()
-
-                if (isTextNotEmpty && !isAnimationPlaying) {
-                    animationView.visibility = View.VISIBLE
-                    animationView.playAnimation()
-                    isAnimationPlaying = true
-
-                    handler.postDelayed({
-                        animationView.pauseAnimation()
-                    }, 1790)
-
-                } else if (!isTextNotEmpty && isAnimationPlaying) {
-                    animationView.visibility = View.INVISIBLE
-                    animationView.pauseAnimation()
-                    isAnimationPlaying = false
-                }
-            }
-        })
-    }
-
-    private fun login_password_tick(){
-        val animation_tick: EditText = findViewById(R.id.Password)
-        val animationView: LottieAnimationView = findViewById(R.id.login_password_tick)
-
-        var isAnimationPlaying = false // Animasyonun oynatılıp oynatılmadığını izlemek için bir değişken
-        val handler = Handler(Looper.getMainLooper())
-        animation_tick.addTextChangedListener(object : TextWatcher {
-            override fun beforeTextChanged(charSequence: CharSequence, i: Int, i1: Int, i2: Int) {}
-
-            override fun onTextChanged(charSequence: CharSequence, i: Int, i1: Int, i2: Int) {}
-
-            override fun afterTextChanged(editable: Editable) {
-                val isTextNotEmpty = editable.isNotEmpty()
-
-                if (isTextNotEmpty && !isAnimationPlaying) {
-                    animationView.visibility = View.VISIBLE
-                    animationView.playAnimation()
-                    isAnimationPlaying = true
-
-                    handler.postDelayed({
-                        animationView.pauseAnimation()
-                    }, 1790)
-
-                } else if (!isTextNotEmpty && isAnimationPlaying) {
-                    animationView.visibility = View.INVISIBLE
-                    animationView.pauseAnimation()
-                    isAnimationPlaying = false
-                }
-            }
-        })
     }
 }

@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">Gym Tech</string>
+    <string name="kullanici_adinizi_giriniz">Kullanıcı Adınızı Giriniz...</string>
+    <string name="giris_yap">Giriş Yap</string>
+    <string name="sifrenizi_giriniz">Şifrenizi Giriniz...</string>
+    <string name="sifremi_unuttum">Şifremi Unuttum</string>
+    <string name="kayit_ol">Kayıt Ol</string>
+    <string name="e_mail_adresinizi_giriniz">E-mail Adresinizi Giriniz...</string>
+    <string name="mail_adresinizi_giriniz">Mail Adresinizi Giriniz...</string>
+    <string name="sifrenizi_tekrar_giriniz">Şifrenizi Tekrar Giriniz...</string>
+    <string name="mail_adresiniz">Mail Adresiniz</string>
+    <string name="mail">Mail</string>
+    <string name="sifre">Şifre</string>
+    <string name="sifreni_mi_unuttun">Şifreni mi unuttun ?</string>
+    <string name="hala_uye_degil_misin">Hala üye değil misin ?</string>
+    <string name="zaten_ye_misin">Zaten üye misin?</string>
+    <string name="sifreyi_tekrar_giriniz">Şifreyi tekrar giriniz</string>
 </resources>

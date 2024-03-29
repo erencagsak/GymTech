@@ -183,7 +183,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Zate Üye misiniz?"
+                    android:text="Zaten Üye misiniz?"
                     android:layout_marginLeft="100dp"
                     tools:ignore="HardcodedText,RtlHardcoded" />
                 <TextView
@@ -191,8 +191,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Giriş Yap"
-                    android:layout_marginLeft="213dp"
+                    android:layout_marginLeft="220dp"
                     android:textColor="@color/red"
+                    android:textStyle="bold"
                     tools:ignore="HardcodedText,RtlHardcoded" />
             </RelativeLayout>
 

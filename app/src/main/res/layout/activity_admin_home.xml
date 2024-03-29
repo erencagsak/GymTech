@@ -7,4 +7,6 @@
     android:layout_height="match_parent"
     tools:context=".activity.AdminHomeActivity">
 
+    <include
+        layout="@layout/activity_nav_bar"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

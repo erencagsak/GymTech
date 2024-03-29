@@ -186,7 +186,7 @@
                     android:text="Kayıt Ol"
                     android:textColor="@color/red"
                     android:textStyle="bold"
-                    android:layout_marginLeft="215dp"
+                    android:layout_marginLeft="217dp"
                     tools:ignore="HardcodedText,RtlHardcoded" />
 
             </RelativeLayout>

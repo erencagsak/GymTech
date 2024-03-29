@@ -28,13 +28,22 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_marginTop="150dp"
-        android:layout_marginEnd="146dp"
+        android:layout_marginEnd="50dp"
         android:fontFamily="sans-serif-medium"
-        android:text="GİRİŞ YAP"
+        android:text="KULLANICI BİLGİLERİ"
         android:textColor="@color/white"
         android:textSize="32sp"
         android:textStyle="bold"
         tools:ignore="HardcodedText" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="168dp"
+        android:orientation="vertical"
+        android:padding="28dp"
+        tools:ignore="MissingPrefix,UseCompoundDrawables,UselessLeaf">
+
+    </LinearLayout>
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -45,7 +54,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="vertical"
             android:padding="28sp">
 
@@ -57,28 +66,19 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Hoşgeldiniz"
-                android:textColor="@color/my_primary"
-                android:textStyle="bold"
-                android:textSize="32sp"
-                tools:ignore="HardcodedText" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Lütfen giriş bilgilerinizle giriş yapınız"
                 android:alpha="0.7"
+                android:text="Lütfen bilgilerinizi güncelleyeniz."
                 tools:ignore="HardcodedText" />
 
             <View
                 android:layout_width="wrap_content"
-                android:layout_height="30dp"/>
+                android:layout_height="30dp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="E-Posta Adresiniz :"
                 android:alpha="0.7"
+                android:text="Adınız :"
                 android:textStyle="bold"
                 tools:ignore="HardcodedText" />
 
@@ -91,25 +91,24 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.536"
-                app:startIconDrawable="@drawable/ic_person">
+                app:layout_constraintVertical_bias="0.536">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/LoginMail"
+                    android:id="@+id/UserName"
                     android:layout_width="330dp"
                     android:layout_height="52dp"
-                    android:inputType="textEmailAddress" />
+                    android:inputType="text" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <View
                 android:layout_width="wrap_content"
-                android:layout_height="25dp"/>
+                android:layout_height="20dp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Şifreniz :"
                 android:alpha="0.7"
+                android:text="Soyadınız :"
                 android:textStyle="bold"
                 tools:ignore="HardcodedText" />
 
@@ -117,79 +116,74 @@
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="357dp"
                 android:layout_height="67dp"
-                app:endIconMode="password_toggle"
+                app:endIconMode="clear_text"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.536"
-                app:startIconDrawable="@drawable/ic_key">
+                app:layout_constraintVertical_bias="0.536">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/LoginPassword"
+                    android:id="@+id/UserSurname"
                     android:layout_width="330dp"
                     android:layout_height="52dp"
-                    android:inputType="textPassword" />
+                    android:inputType="textEmailAddress" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="20dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:alpha="0.7"
+                android:text="Doğum Tarihiniz :"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="357dp"
+                android:layout_height="67dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.536">
+
+                <EditText
+                    android:id="@+id/UserDate"
+                    android:layout_width="330dp"
+                    android:layout_height="52dp"
+                    android:inputType="none"
+                    android:focusable="false"
+                    android:hint="GG/MM/YYYY"
+                    android:onClick="showDatePickerDialog"
+                    tools:ignore="Autofill,HardcodedText,TextFields,UsingOnClickInXml" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <CheckBox
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Beni Hatırla"
-                    android:layout_centerVertical="true"
-                    android:alpha="0.7"
-                    tools:ignore="HardcodedText" />
-
-                <TextView
-                    android:id="@+id/forgotPassword"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Şifremi Unuttum"
-                    android:layout_alignParentEnd="true"
-                    android:layout_centerVertical="true"
-                    tools:ignore="HardcodedText" />
-
-            </RelativeLayout>
+                android:layout_height="wrap_content"
+                tools:ignore="UselessLeaf" />
 
             <View
                 android:layout_width="wrap_content"
-                android:layout_height="10dp"/>
+                android:layout_height="10dp" />
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/LoginButton"
+                android:id="@+id/UpdateDetails"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:text="Giriş Yap"
+                android:text="Bilgileri Güncelle"
                 app:cornerRadius="32dp"
                 tools:ignore="HardcodedText" />
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                tools:ignore="UselessLeaf">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Üye değil misiniz?"
-                    android:layout_marginLeft="100dp"
-                    tools:ignore="HardcodedText,RtlHardcoded"/>
-
-                <TextView
-                    android:id="@+id/RegisterTextView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Kayıt Ol"
-                    android:textColor="@color/red"
-                    android:textStyle="bold"
-                    android:layout_marginLeft="215dp"
-                    tools:ignore="HardcodedText,RtlHardcoded" />
-
-            </RelativeLayout>
+                tools:ignore="UselessLeaf"/>
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>

@@ -29,7 +29,7 @@ class RegisterActivity : AppCompatActivity() {
                     firebaseAuth.createUserWithEmailAndPassword(registerMail,registerPassword).addOnCompleteListener{
                         if (it.isSuccessful){
                             Toast.makeText(this,"Kayıt olma işlemi başarılı...",Toast.LENGTH_LONG).show()
-                            val intent = Intent(this,LoginActivity::class.java)
+                            val intent = Intent(this,UserDetailsActivity::class.java)
                             startActivity(intent)
                         }
                         else{
@@ -45,7 +45,7 @@ class RegisterActivity : AppCompatActivity() {
                 Toast.makeText(this,"Bu alan boş bırakılamaz !",Toast.LENGTH_LONG).show()
             }
         }
-        binding.LoginButton.setOnClickListener{
+        binding.LoginTextView.setOnClickListener{
             val loginIntent = Intent(this,LoginActivity::class.java)
             startActivity(loginIntent)
         }

@@ -8,7 +8,7 @@ import com.eren.gymtech.databinding.ActivityLoginBinding
 import com.google.firebase.auth.FirebaseAuth
 
 class LoginActivity : AppCompatActivity() {
-    private val adminUid : String = "6xi3tLUz2aTJ3JfMezzAxKKmt9h1"
+    private val adminUid : String = "3TjBDEaIeDPVjI0bSDNuIOspnAI3"
     private lateinit var binding : ActivityLoginBinding
     private lateinit var firebaseAuth: FirebaseAuth
 
@@ -30,8 +30,8 @@ class LoginActivity : AppCompatActivity() {
     // Giriş Yap - Firebase
     private fun login(){
         binding.LoginButton.setOnClickListener {
-            val mail = binding.LoginMail.editText?.text.toString()
-            val password = binding.LoginPassword.editText?.text.toString()
+            val mail = binding.LoginMail.text.toString()
+            val password = binding.LoginPassword.text.toString()
 
             if (mail.isNotEmpty() && password.isNotEmpty()) {
                 firebaseAuth.signInWithEmailAndPassword(mail, password).addOnCompleteListener { task ->
@@ -59,14 +59,14 @@ class LoginActivity : AppCompatActivity() {
             }
             else
             {
-                Toast.makeText(this, "Mail veya şifre boş olamaz", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "E-Posta veya şifre boş olamaz", Toast.LENGTH_SHORT).show()
             }
         }
     }
 
     // Kayıt olma ekranına yönlendir
     private fun registerPage(){
-        binding.RegisterButton.setOnClickListener {
+        binding.RegisterTextView.setOnClickListener {
             val intent = Intent(this,RegisterActivity::class.java)
             startActivity(intent)
         }

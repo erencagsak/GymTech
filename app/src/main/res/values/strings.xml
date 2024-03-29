@@ -15,4 +15,9 @@
     <string name="hala_uye_degil_misin">Hala üye değil misin ?</string>
     <string name="zaten_ye_misin">Zaten üye misin?</string>
     <string name="sifreyi_tekrar_giriniz">Şifreyi tekrar giriniz</string>
+    <string name="soyad">Soyad</string>
+    <string name="ad">Ad</string>
+    <string name="dogum_tarihi">Doğum Tarihi</string>
+    <string name="bilgileri_kaydet">Bilgileri Kaydet</string>
+    <string name="bilgilerini_guncelle">Bilgilerini Güncelle</string>
 </resources>

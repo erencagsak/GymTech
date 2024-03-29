@@ -8,6 +8,7 @@
     <color name="black">#FF000000</color>
     <color name="black_200">#0f0d1a</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="white_200">#94FFFFFF</color>
     <color name="red">#FF0000</color>
     <color name="blue">#D8D8D8</color>
     <color name="dark_blue">#003769</color>
@@ -18,4 +19,7 @@
     <color name="drop_down_icon">#65A8D7</color>
     <color name="orange">#FFA500</color>
     <color name="yellow">#FFFF00</color>
+
+    <color name="my_primary">#5335B1</color>
+    <color name="my_secondary">#673AB7</color>
 </resources>

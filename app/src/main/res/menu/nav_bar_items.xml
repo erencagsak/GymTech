@@ -24,11 +24,8 @@
         </menu>
     </item>
 
-    <item android:title="" />
-
-    <item android:title="GymTech Nedir"
+    <item android:title="Gym Tech Nedir ?"
         tools:ignore="HardcodedText">
-
         <menu>
             <item
                 android:id="@+id/navAboutUs"
@@ -43,11 +40,18 @@
         </menu>
     </item>
 
-    <item android:title="" />
+    <item android:title="Hesabım"
+        tools:ignore="HardcodedText">
+        <menu>
+            <item
+                android:id="@+id/navAccount"
+                android:title="Hesabımı Yönet"
+                android:icon="@drawable/ic_account"/>
+        </menu>
+    </item>
 
     <item android:title="GymTech Uygulamasından Çık"
         tools:ignore="HardcodedText">
-
         <menu>
             <item
                 android:id="@+id/navExit"

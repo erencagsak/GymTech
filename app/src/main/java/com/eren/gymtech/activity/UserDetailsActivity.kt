@@ -37,7 +37,7 @@ class UserDetailsActivity : AppCompatActivity() {
             val userUid = firebaseAuth.currentUser?.uid
 
             if (userName.isNotEmpty() && userSurname.isNotEmpty() && userBirthDate.isNotEmpty()){
-                var userData:HashMap<String , Any> = HashMap()
+                val userData:HashMap<String , Any> = HashMap()
                 userData["Kullanıcı Adı"] = userName
                 userData["Kullanıcı Soyadı"] = userSurname
                 userData["Kullanıcı Doğum Tarihi"] = userBirthDate

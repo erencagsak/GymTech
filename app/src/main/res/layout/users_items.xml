@@ -95,12 +95,60 @@
                 tools:ignore="HardcodedText" />
         </LinearLayout>
 
-        <CheckBox
-            android:id="@+id/tvUserIsAMember"
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Kullanıcı salona üye mi ?"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mail Adresi: "
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvUserMail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="erentahacagsak@gmail.com"
+            android:textColor="@color/black"
+            android:textSize="20sp"
             tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/tvUserUid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="erentahacagsak@gmail.com"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            tools:ignore="HardcodedText" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <CheckBox
+                android:id="@+id/tvUserIsAMember"
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
+                android:text="Kullanıcı salona üye mi ?"
+                tools:ignore="HardcodedText" />
+
+            <Button
+                android:id="@+id/tvUserEdit"
+                android:layout_width="100dp"
+                android:padding="5dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="2dp"
+                android:text="Düzenle"
+                android:textSize="12dp"
+                tools:ignore="HardcodedText,RtlHardcoded,SpUsage" />
+        </LinearLayout>
 
     </LinearLayout>
 

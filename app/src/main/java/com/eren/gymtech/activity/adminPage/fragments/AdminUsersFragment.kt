@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.eren.gymtech.R
 import com.eren.gymtech.activity.database.Users
 import com.eren.gymtech.activity.database.UsersAdapter
+import com.eren.gymtech.databinding.FragmentAdminUsersBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
@@ -22,7 +23,6 @@ class AdminUsersFragment : Fragment() {
     private lateinit var databaseReference: DatabaseReference
     private lateinit var userRecyclerView: RecyclerView
     private lateinit var userArrayList: ArrayList<Users>
-    private lateinit var firebaseAuth: FirebaseAuth
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.fragment_admin_users, container, false)

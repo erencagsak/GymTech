@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    tools:showIn="navigation_view">
+
+    <item android:title="Ana Sayfa"
+        tools:ignore="HardcodedText">
+        <menu>
+            <item
+                android:id="@+id/navReturnHomePage"
+                android:title="Ana Sayfaya Dön"
+                android:icon="@drawable/ic_home"
+                tools:ignore="HardcodedText" />
+        </menu>
+    </item>
+
+    <item android:title="Yönetici Paneli"
+        tools:ignore="HardcodedText">
+        <menu>
+            <item
+                android:id="@+id/navUsers"
+                android:title="Kullanıcılar"
+                android:icon="@drawable/ic_person"
+                tools:ignore="HardcodedText" />
+            <item
+                android:id="@+id/navExercise"
+                android:title="Egzersiz Hareketleri"
+                android:icon="@drawable/ic_exercise"
+                tools:ignore="HardcodedText" />
+            <item
+                android:id="@+id/navPrices"
+                android:title="Fiyat Listesi"
+                android:icon="@drawable/ic_price"
+                tools:ignore="HardcodedText" />
+        </menu>
+    </item>
+
+    <item android:title="Gym Tech Nedir ?"
+        tools:ignore="HardcodedText">
+        <menu>
+            <item
+                android:id="@+id/navAboutUs"
+                android:title="Hakkımızda"
+                android:icon="@drawable/ic_aboutus"
+                tools:ignore="HardcodedText" />
+            <item
+                android:id="@+id/navPhone"
+                android:title="İletişim"
+                android:icon="@drawable/ic_phone"
+                tools:ignore="HardcodedText" />
+        </menu>
+    </item>
+
+    <item android:title="Hesabım"
+        tools:ignore="HardcodedText">
+        <menu>
+            <item
+                android:id="@+id/navAccount"
+                android:title="Hesabımı Yönet"
+                android:icon="@drawable/ic_account"/>
+        </menu>
+    </item>
+
+    <item android:title="GymTech Uygulamasından Çık"
+        tools:ignore="HardcodedText">
+        <menu>
+            <item
+                android:id="@+id/navExit"
+                android:title="Çıkış Yap"
+                android:icon="@drawable/ic_exit"
+                tools:ignore="HardcodedText" />
+        </menu>
+    </item>
+</menu>

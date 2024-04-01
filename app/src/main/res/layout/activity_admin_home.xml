@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     android:id="@+id/drawer_layout"
-    tools:context=".activity.AdminHomeActivity"
+    tools:context=".activity.adminPage.AdminHomeActivity"
     tools:openDrawer="start">
 
     <include
@@ -21,7 +21,7 @@
         android:id="@+id/nav_view"
         android:layout_gravity="start"
         app:headerLayout="@layout/nav_header_main"
-        app:menu="@menu/nav_bar_items">
+        app:menu="@menu/admin_nav_bar_items">
 
         <TextView
             android:id="@+id/userName"

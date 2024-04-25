@@ -71,7 +71,8 @@ class UserDetailsActivity : AppCompatActivity() {
                         }
                         else
                         {
-                            Toast.makeText(this,"Kullanıcı bilgileri kaydedilirken bir hata oluştu.",Toast.LENGTH_LONG).show()
+                            val errorMessage = task.exception?.message
+                            Toast.makeText(this,"$errorMessage",Toast.LENGTH_LONG).show()
                         }
                     }
             }

@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:id="@+id/fragment_container"
+    tools:context=".activity.userPage.fragments.exercises.ChestFragment">
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="15dp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:orientation="vertical"
+            tools:ignore="InefficientWeight,ObsoleteLayoutParam,ScrollViewSize">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                tools:ignore="UselessLeaf,UselessParent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    tools:ignore="UselessParent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        tools:ignore="DisableBaselineAlignment">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="40dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_weight="0.8"
+                            android:orientation="vertical"
+                            tools:ignore="RtlHardcoded">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="monospace"
+                                android:text="Bent Over Rear Delt Fly"
+                                android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="15dp"
+                                android:textStyle="bold"
+                                tools:ignore="HardcodedText,SpUsage" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Max 8-10 Tekrar"
+                                android:textSize="12dp"
+                                android:textStyle="bold"
+                                tools:ignore="HardcodedText,SpUsage" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="120dp"
+                            android:layout_marginBottom="30dp"
+                            android:layout_marginRight="25dp"
+                            android:layout_weight="1.0"
+                            tools:ignore="RtlHardcoded">
+
+                            <pl.droidsonroids.gif.GifImageView
+                                android:layout_width="180dp"
+                                android:layout_height="140dp"
+                                android:src="@drawable/bent_over_rear_delt_fly"
+                                tools:ignore="ContentDescription" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.0"
+                            >
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="1.0dp"
+                        android:background="#ffaaa9a9"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    tools:ignore="UselessParent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        tools:ignore="DisableBaselineAlignment">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="40dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_weight="0.8"
+                            android:orientation="vertical"
+                            tools:ignore="RtlHardcoded">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="monospace"
+                                android:text="Seated Arnold Press"
+                                android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="15dp"
+                                android:textStyle="bold"
+                                tools:ignore="HardcodedText,SpUsage" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Max 8-10 Tekrar"
+                                android:textSize="12dp"
+                                android:textStyle="bold"
+                                tools:ignore="HardcodedText,SpUsage" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="120dp"
+                            android:layout_marginBottom="30dp"
+                            android:layout_marginRight="25dp"
+                            android:layout_weight="1.0"
+                            tools:ignore="RtlHardcoded">
+
+                            <pl.droidsonroids.gif.GifImageView
+                                android:layout_width="180dp"
+                                android:layout_height="140dp"
+                                android:src="@drawable/seated_arnold_press"
+                                tools:ignore="ContentDescription" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.0"
+                            >
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="1.0dp"
+                        android:background="#ffaaa9a9"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    tools:ignore="UselessParent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        tools:ignore="DisableBaselineAlignment">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="40dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_weight="0.8"
+                            android:orientation="vertical"
+                            tools:ignore="RtlHardcoded">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="monospace"
+                                android:text="Seated Bent Over Rear Delt Fly"
+                                android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="15dp"
+                                android:textStyle="bold"
+                                tools:ignore="HardcodedText,SpUsage" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Max 8-10 Tekrar"
+                                android:textSize="12dp"
+                                android:textStyle="bold"
+                                tools:ignore="HardcodedText,SpUsage" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="120dp"
+                            android:layout_marginBottom="30dp"
+                            android:layout_marginRight="25dp"
+                            android:layout_weight="1.0"
+                            tools:ignore="RtlHardcoded">
+
+                            <pl.droidsonroids.gif.GifImageView
+                                android:layout_width="180dp"
+                                android:layout_height="140dp"
+                                android:src="@drawable/seated_bent_over_rear_delt_fly"
+                                tools:ignore="ContentDescription" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.0"
+                            >
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="1.0dp"
+                        android:background="#ffaaa9a9"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,14 +1,496 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:id="@+id/fragment_container"
     tools:context=".activity.userPage.fragments.UserExercisesFragment">
 
-    <!-- TODO: Update blank fragment layout -->
+    
     <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GYM TECH SPOR HAREKETLERİ"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="17dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="70dp"
+        tools:ignore="HardcodedText,RtlHardcoded,SpUsage" />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="15dp"/>
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_weight="1.0"
+        android:orientation="vertical"
+        tools:ignore="InefficientWeight,ObsoleteLayoutParam,ScrollViewSize">
 
-</FrameLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:ignore="UselessLeaf,UselessParent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical"
+                tools:ignore="UselessParent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal"
+                    tools:ignore="DisableBaselineAlignment">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="monospace"
+                            android:text="Göğüs Antrenmanları"
+                            android:textAllCaps="true"
+                            android:textColor="@color/black"
+                            android:textSize="15dp"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText,SpUsage" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Max 8-10 Tekrar"
+                            android:textSize="12dp"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText,SpUsage" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2.0">
+
+                        <ImageView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_chest"
+                            tools:ignore="ContentDescription" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.0"
+                        >
+
+                        <ImageView
+                            android:id="@+id/openChest"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_margin="5.0dp"
+                            android:src="@drawable/ic_baseline_keyboard_arrow_right_24"
+                            tools:ignore="ContentDescription" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="1.0dp"
+                    android:background="#ffaaa9a9"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical"
+                tools:ignore="UselessParent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal"
+                    tools:ignore="DisableBaselineAlignment">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="monospace"
+                            android:text="Kol Antrenmanları"
+                            android:textAllCaps="true"
+                            android:textColor="@color/black"
+                            android:textSize="15dp"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText,SpUsage" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Max 8-10 Tekrar"
+                            android:textSize="12dp"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText,SpUsage" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2.0">
+
+                        <ImageView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_arm"
+                            tools:ignore="ContentDescription" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.0"
+                        >
+
+                        <ImageView
+                            android:id="@+id/openArm"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_margin="5.0dp"
+                            android:src="@drawable/ic_baseline_keyboard_arrow_right_24"
+                            tools:ignore="ContentDescription" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="1.0dp"
+                    android:background="#ffaaa9a9"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical"
+                tools:ignore="UselessParent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal"
+                    tools:ignore="DisableBaselineAlignment">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="monospace"
+                            android:text="Sırt Antrenmanları"
+                            android:textAllCaps="true"
+                            android:textColor="@color/black"
+                            android:textSize="15dp"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText,SpUsage" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Max 8-10 Tekrar"
+                            android:textSize="12dp"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText,SpUsage" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2.0">
+
+                        <ImageView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_back"
+                            tools:ignore="ContentDescription" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.0"
+                        >
+
+                        <ImageView
+                            android:id="@+id/openBack"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_margin="5.0dp"
+                            android:src="@drawable/ic_baseline_keyboard_arrow_right_24"
+                            tools:ignore="ContentDescription" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="1.0dp"
+                    android:background="#ffaaa9a9"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical"
+                tools:ignore="UselessParent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal"
+                    tools:ignore="DisableBaselineAlignment">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="monospace"
+                            android:text="Bacak Antrenmanları"
+                            android:textAllCaps="true"
+                            android:textColor="@color/black"
+                            android:textSize="15dp"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText,SpUsage" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Max 8-10 Tekrar"
+                            android:textSize="12dp"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText,SpUsage" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2.0">
+
+                        <ImageView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_leg"
+                            tools:ignore="ContentDescription" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.0"
+                        >
+
+                        <ImageView
+                            android:id="@+id/openLeg"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_margin="5.0dp"
+                            android:src="@drawable/ic_baseline_keyboard_arrow_right_24"
+                            tools:ignore="ContentDescription" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="1.0dp"
+                    android:background="#ffaaa9a9"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical"
+                tools:ignore="UselessParent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal"
+                    tools:ignore="DisableBaselineAlignment">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="monospace"
+                            android:text="Karın Kası Antrenmanları"
+                            android:textAllCaps="true"
+                            android:textColor="@color/black"
+                            android:textSize="15dp"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText,SpUsage" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Max 8-10 Tekrar"
+                            android:textSize="12dp"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText,SpUsage" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2.0">
+
+                        <ImageView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_abt"
+                            tools:ignore="ContentDescription" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.0"
+                        >
+
+                        <ImageView
+                            android:id="@+id/openAbt"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_margin="5.0dp"
+                            android:src="@drawable/ic_baseline_keyboard_arrow_right_24"
+                            tools:ignore="ContentDescription" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="1.0dp"
+                    android:background="#ffaaa9a9"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical"
+                tools:ignore="UselessParent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal"
+                    tools:ignore="DisableBaselineAlignment">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="monospace"
+                            android:text="Omuz Antrenmanları"
+                            android:textAllCaps="true"
+                            android:textColor="@color/black"
+                            android:textSize="15dp"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText,SpUsage" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Max 8-10 Tekrar"
+                            android:textSize="12dp"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText,SpUsage" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2.0">
+
+                        <ImageView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_shoulder"
+                            tools:ignore="ContentDescription" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.0"
+                        >
+
+                        <ImageView
+                            android:id="@+id/openShoulder"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_margin="5.0dp"
+                            android:src="@drawable/ic_baseline_keyboard_arrow_right_24"
+                            tools:ignore="ContentDescription" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="1.0dp"
+                    android:background="#ffaaa9a9"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

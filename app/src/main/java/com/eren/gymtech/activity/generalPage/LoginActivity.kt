@@ -45,12 +45,14 @@ class LoginActivity : AppCompatActivity() {
                             Toast.makeText(this,"Giriş başarılı...",Toast.LENGTH_LONG).show()
                             val adminIntent = Intent(this, AdminHomeActivity::class.java)
                             startActivity(adminIntent)
+                            finish()
                         }
                         else
                         {
                             Toast.makeText(this,"Giriş başarılı...",Toast.LENGTH_LONG).show()
                             val userIntent = Intent(this, UserHomeActivity::class.java)
                             startActivity(userIntent)
+                            finish()
                         }
                     }
                     else
@@ -71,6 +73,7 @@ class LoginActivity : AppCompatActivity() {
         binding.RegisterTextView.setOnClickListener {
             val intent = Intent(this, RegisterActivity::class.java)
             startActivity(intent)
+            finish()
         }
     }
 }

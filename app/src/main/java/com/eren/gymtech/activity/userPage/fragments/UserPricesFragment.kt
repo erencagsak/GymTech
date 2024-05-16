@@ -20,15 +20,9 @@ class UserPricesFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val registerGold = view.findViewById<Button>(R.id.registerGold)
-        val registerSilver = view.findViewById<Button>(R.id.registerSilver)
+        val priceDetails = view.findViewById<Button>(R.id.priceDetails)
 
-        registerGold.setOnClickListener {
-            val intent = Intent(activity, UserGoldActivity::class.java)
-            startActivity(intent)
-        }
-
-        registerSilver.setOnClickListener {
+        priceDetails.setOnClickListener {
             val intent = Intent(activity, UserSilverActivity::class.java)
             startActivity(intent)
         }

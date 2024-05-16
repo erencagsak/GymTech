@@ -50,7 +50,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         app:cardCornerRadius="28dp"
-        android:layout_marginBottom="-20dp">
+        android:layout_marginBottom="-40dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -249,6 +249,7 @@
                 android:layout_height="60dp"
                 android:text="Kayıt Ol"
                 app:cornerRadius="32dp"
+                android:layout_marginBottom="20dp"
                 tools:ignore="HardcodedText" />
 
             <RelativeLayout

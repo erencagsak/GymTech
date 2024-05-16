@@ -5,322 +5,458 @@
     android:layout_height="match_parent"
     tools:context=".activity.userPage.fragments.UserPricesFragment">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gym Tech - Gümüş Üyelik"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center_horizontal"
+        tools:ignore="HardcodedText,SpUsage" />
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:ignore="UselessParent">
 
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1.0"
+        android:orientation="vertical"
+        tools:ignore="InefficientWeight,ObsoleteLayoutParam,ScrollViewSize">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            tools:ignore="ScrollViewSize,UselessLeaf,UselessParent">
+            tools:ignore="UselessLeaf,UselessParent">
 
             <LinearLayout
-                android:layout_width="411dp"
-                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:gravity="center"
                 android:orientation="vertical"
                 tools:ignore="UselessParent">
 
-                <TextView
+                <View
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Gym Tech - Gümüş Üyelik"
-                    android:textStyle="bold"
-                    android:textColor="@color/black"
-                    android:textSize="20dp"
-                    android:layout_marginTop="20dp"
-                    android:layout_gravity="center_horizontal"
-                    tools:ignore="HardcodedText,SpUsage" />
+                    android:layout_height="50dp" />
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginLeft="55dp"
-                    android:layout_marginTop="20dp"
-                    tools:ignore="RtlHardcoded,UseCompoundDrawables">
+                    android:orientation="horizontal"
+                    tools:ignore="DisableBaselineAlignment">
 
-                    <ImageView
-                        android:layout_width="17dp"
-                        android:layout_height="20dp"
-                        android:src="@drawable/red_tick"
-                        tools:ignore="ContentDescription" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
+                    <LinearLayout
+                        android:layout_width="433dp"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_marginTop="30dp"
-                        android:layout_marginLeft="8dp"
-                        android:text="Üyelik Dönemine Göre Dondurma"
-                        android:textColor="@color/black"
-                        android:textSize="15dp"
-                        android:textStyle="bold"
-                        tools:ignore="HardcodedText,SpUsage"/>
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginLeft="55dp"
-                    android:layout_marginTop="20dp"
-                    tools:ignore="RtlHardcoded,UseCompoundDrawables">
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
 
-                    <ImageView
-                        android:layout_width="17dp"
-                        android:layout_height="20dp"
-                        android:src="@drawable/red_tick"
-                        tools:ignore="ContentDescription" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_marginTop="30dp"
-                        android:layout_marginLeft="8dp"
-                        android:text="Grup Derslerine Erken Rezervasyon – 4 Gün"
-                        android:textColor="@color/black"
-                        android:textSize="15dp"
-                        android:textStyle="bold"
-                        tools:ignore="HardcodedText,SpUsage"/>
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginLeft="55dp"
-                    android:layout_marginTop="20dp"
-                    tools:ignore="RtlHardcoded,UseCompoundDrawables">
-
-                    <ImageView
-                        android:layout_width="17dp"
-                        android:layout_height="20dp"
-                        android:src="@drawable/red_tick"
-                        tools:ignore="ContentDescription" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_marginTop="30dp"
-                        android:layout_marginLeft="8dp"
-                        android:text="Kişiye Özel Ölçüm ve Program"
-                        android:textColor="@color/black"
-                        android:textSize="15dp"
-                        android:textStyle="bold"
-                        tools:ignore="HardcodedText,SpUsage"/>
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginLeft="55dp"
-                    android:layout_marginTop="20dp"
-                    tools:ignore="RtlHardcoded,UseCompoundDrawables">
-
-                    <ImageView
-                        android:layout_width="17dp"
-                        android:layout_height="20dp"
-                        android:src="@drawable/red_tick"
-                        tools:ignore="ContentDescription" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_marginTop="30dp"
-                        android:layout_marginLeft="8dp"
-                        android:text="Ayda 1 kez Misafir Getirebilme"
-                        android:textColor="@color/black"
-                        android:textSize="15dp"
-                        android:textStyle="bold"
-                        tools:ignore="HardcodedText,SpUsage"/>
+                        <TextView
+                            android:layout_width="435dp"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="monospace"
+                            android:text="✅ 1 Hafta Üyelik Dondurma"
+                            android:textAllCaps="true"
+                            android:textColor="@color/black"
+                            android:textSize="17dp"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText,SpUsage" />
+                    </LinearLayout>
                 </LinearLayout>
 
-                <Button
-                    android:id="@+id/registerSilver"
-                    android:layout_width="180dp"
-                    android:layout_height="60dp"
-                    android:layout_gravity="center_horizontal"
-                    android:text="Üye Ol"
-                    tools:ignore="HardcodedText" />
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="1.0dp"
+                    android:background="#ffaaa9a9"/>
+            </LinearLayout>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Gym Tech - Altın Üyelik"
-                    android:textStyle="bold"
-                    android:textColor="@color/black"
-                    android:textSize="20dp"
-                    android:layout_marginTop="40dp"
-                    android:layout_gravity="center_horizontal"
-                    tools:ignore="HardcodedText,SpUsage" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical"
+                tools:ignore="UselessParent">
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginLeft="55dp"
-                    android:layout_marginTop="20dp"
-                    tools:ignore="RtlHardcoded,UseCompoundDrawables">
+                    android:orientation="horizontal"
+                    tools:ignore="DisableBaselineAlignment">
 
-                    <ImageView
-                        android:layout_width="17dp"
-                        android:layout_height="20dp"
-                        android:src="@drawable/red_tick"
-                        tools:ignore="ContentDescription" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
+                    <LinearLayout
+                        android:layout_width="433dp"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_marginTop="30dp"
-                        android:layout_marginLeft="8dp"
-                        android:text="Üyelik Dönemine Göre Dondurma"
-                        android:textColor="@color/black"
-                        android:textSize="15dp"
-                        android:textStyle="bold"
-                        tools:ignore="HardcodedText,SpUsage"/>
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="435dp"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="monospace"
+                            android:text="✅ Grup Derslerine Erken Rezervasyon"
+                            android:textAllCaps="true"
+                            android:textColor="@color/black"
+                            android:textSize="17dp"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText,SpUsage" />
+                    </LinearLayout>
                 </LinearLayout>
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="1.0dp"
+                    android:background="#ffaaa9a9"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical"
+                tools:ignore="UselessParent">
+
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginLeft="55dp"
-                    android:layout_marginTop="20dp"
-                    tools:ignore="RtlHardcoded,UseCompoundDrawables">
+                    android:orientation="horizontal"
+                    tools:ignore="DisableBaselineAlignment">
 
-                    <ImageView
-                        android:layout_width="17dp"
-                        android:layout_height="20dp"
-                        android:src="@drawable/red_tick"
-                        tools:ignore="ContentDescription" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
+                    <LinearLayout
+                        android:layout_width="433dp"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_marginTop="30dp"
-                        android:layout_marginLeft="8dp"
-                        android:text="Grup Derslerine Erken Rezervasyon – 4 Gün"
-                        android:textColor="@color/black"
-                        android:textSize="15dp"
-                        android:textStyle="bold"
-                        tools:ignore="HardcodedText,SpUsage"/>
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="435dp"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="monospace"
+                            android:text="✅ Ayda 1 kez misafir getirebilme"
+                            android:textAllCaps="true"
+                            android:textColor="@color/black"
+                            android:textSize="17dp"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText,SpUsage" />
+                    </LinearLayout>
                 </LinearLayout>
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="1.0dp"
+                    android:background="#ffaaa9a9"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gym Tech - Altın Üyelik"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center_horizontal"
+                tools:ignore="HardcodedText,SpUsage" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical"
+                tools:ignore="UselessParent">
+
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginLeft="55dp"
-                    android:layout_marginTop="20dp"
-                    tools:ignore="RtlHardcoded,UseCompoundDrawables">
+                    android:orientation="horizontal"
+                    tools:ignore="DisableBaselineAlignment">
 
-                    <ImageView
-                        android:layout_width="17dp"
-                        android:layout_height="20dp"
-                        android:src="@drawable/red_tick"
-                        tools:ignore="ContentDescription" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
+                    <LinearLayout
+                        android:layout_width="433dp"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_marginTop="30dp"
-                        android:layout_marginLeft="8dp"
-                        android:text="Kişiye Özel Ölçüm ve Program"
-                        android:textColor="@color/black"
-                        android:textSize="15dp"
-                        android:textStyle="bold"
-                        tools:ignore="HardcodedText,SpUsage"/>
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="435dp"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="monospace"
+                            android:text="✅ Üyelik Dönemine Göre Dondurma"
+                            android:textAllCaps="true"
+                            android:textColor="@color/black"
+                            android:textSize="17dp"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText,SpUsage" />
+                    </LinearLayout>
                 </LinearLayout>
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="1.0dp"
+                    android:background="#ffaaa9a9"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical"
+                tools:ignore="UselessParent">
+
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginLeft="55dp"
-                    android:layout_marginTop="20dp"
-                    tools:ignore="RtlHardcoded,UseCompoundDrawables">
+                    android:orientation="horizontal"
+                    tools:ignore="DisableBaselineAlignment">
 
-                    <ImageView
-                        android:layout_width="17dp"
-                        android:layout_height="20dp"
-                        android:src="@drawable/red_tick"
-                        tools:ignore="ContentDescription" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
+                    <LinearLayout
+                        android:layout_width="433dp"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_marginTop="30dp"
-                        android:layout_marginLeft="8dp"
-                        android:text="Ayda 1 kez Misafir Getirebilme"
-                        android:textColor="@color/black"
-                        android:textSize="15dp"
-                        android:textStyle="bold"
-                        tools:ignore="HardcodedText,SpUsage"/>
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="435dp"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="monospace"
+                            android:text="✅ Grup Derslerine Erken Rezervasyon"
+                            android:textAllCaps="true"
+                            android:textColor="@color/black"
+                            android:textSize="17dp"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText,SpUsage" />
+                    </LinearLayout>
                 </LinearLayout>
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="1.0dp"
+                    android:background="#ffaaa9a9"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical"
+                tools:ignore="UselessParent">
+
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginLeft="55dp"
-                    android:layout_marginTop="20dp"
-                    tools:ignore="RtlHardcoded,UseCompoundDrawables">
+                    android:orientation="horizontal"
+                    tools:ignore="DisableBaselineAlignment">
 
-                    <ImageView
-                        android:layout_width="17dp"
-                        android:layout_height="20dp"
-                        android:src="@drawable/red_tick"
-                        tools:ignore="ContentDescription" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
+                    <LinearLayout
+                        android:layout_width="433dp"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_marginTop="30dp"
-                        android:layout_marginLeft="8dp"
-                        android:text="Salonun tüm imkanlarından faydalanabilme"
-                        android:textColor="@color/black"
-                        android:textSize="15dp"
-                        android:textStyle="bold"
-                        tools:ignore="HardcodedText,SpUsage"/>
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="435dp"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="monospace"
+                            android:text="✅ Kişiye Özel Ölçüm ve Program"
+                            android:textAllCaps="true"
+                            android:textColor="@color/black"
+                            android:textSize="17dp"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText,SpUsage" />
+                    </LinearLayout>
                 </LinearLayout>
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="1.0dp"
+                    android:background="#ffaaa9a9"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical"
+                tools:ignore="UselessParent">
+
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginLeft="55dp"
-                    android:layout_marginTop="20dp"
-                    tools:ignore="RtlHardcoded,UseCompoundDrawables">
+                    android:orientation="horizontal"
+                    tools:ignore="DisableBaselineAlignment">
 
-                    <ImageView
-                        android:layout_width="17dp"
-                        android:layout_height="20dp"
-                        android:src="@drawable/red_tick"
-                        tools:ignore="ContentDescription" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
+                    <LinearLayout
+                        android:layout_width="433dp"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_marginTop="30dp"
-                        android:layout_marginLeft="8dp"
-                        android:text="VIP Odalarımızı, imkanlarını ücretsiz kullanabilme"
-                        android:textColor="@color/black"
-                        android:textSize="15dp"
-                        android:textStyle="bold"
-                        tools:ignore="HardcodedText,SpUsage"/>
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="435dp"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="monospace"
+                            android:text="✅ Salonun tüm imkanlarından faydalan"
+                            android:textAllCaps="true"
+                            android:textColor="@color/black"
+                            android:textSize="17dp"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText,SpUsage" />
+                    </LinearLayout>
                 </LinearLayout>
-                <Button
-                    android:id="@+id/registerGold"
-                    android:layout_width="180dp"
-                    android:layout_height="60dp"
-                    android:layout_gravity="center_horizontal"
-                    android:text="Üye Ol"
-                    tools:ignore="HardcodedText" />
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="1.0dp"
+                    android:background="#ffaaa9a9"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical"
+                tools:ignore="UselessParent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    tools:ignore="DisableBaselineAlignment">
+
+                    <LinearLayout
+                        android:layout_width="433dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="435dp"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="monospace"
+                            android:text="✅ VIP imkanları"
+                            android:textAllCaps="true"
+                            android:textColor="@color/black"
+                            android:textSize="17dp"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText,SpUsage" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="1.0dp"
+                    android:background="#ffaaa9a9"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical"
+                tools:ignore="UselessParent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    tools:ignore="DisableBaselineAlignment">
+
+                    <LinearLayout
+                        android:layout_width="433dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="435dp"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="monospace"
+                            android:text="✅ Ayda 2 kez Misafir Getirebilme"
+                            android:textAllCaps="true"
+                            android:textColor="@color/black"
+                            android:textSize="17dp"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText,SpUsage" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="1.0dp"
+                    android:background="#ffaaa9a9"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical"
+                tools:ignore="UselessParent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    tools:ignore="DisableBaselineAlignment">
+
+                    <LinearLayout
+                        android:layout_width="100dp"
+                        android:layout_height="45dp"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <Button
+                            android:id="@+id/priceDetails"
+                            android:layout_width="254dp"
+                            android:layout_height="40dp"
+                            android:layout_marginStart="60dp"
+                            android:layout_marginEnd="50dp"
+                            android:text="Detaylar İçin Tıklayınız"
+                            android:textAlignment="center"
+                            tools:ignore="HardcodedText" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="1.0dp"
+                    android:background="#ffaaa9a9"/>
             </LinearLayout>
         </LinearLayout>
-    </ScrollView>
+    </LinearLayout>
 </FrameLayout>

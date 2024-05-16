@@ -4,122 +4,155 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/my_primary"
     tools:context=".activity.userPage.fragments.UserAboutUsFragment">
 
     <TextView
-        android:layout_height="wrap_content"
         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginLeft="105dp"
+        android:layout_marginEnd="105dp"
+        android:layout_marginTop="99dp"
         android:text="Hakkımızda"
-        android:textSize="20dp"
-        android:layout_marginTop="90dp"
-        android:layout_marginLeft="50dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        tools:ignore="HardcodedText,RtlHardcoded,SpUsage" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="_______________________"
-        android:textSize="30dp"
-        android:textColor="@color/purple_200"
-        android:textStyle="bold"
-        android:layout_marginTop="100dp"
-        android:layout_marginLeft="50dp"
-        android:layout_marginRight="50dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        tools:ignore="HardcodedText,RtlHardcoded,SpUsage" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="AndroidS ile Yeni Uygulamalara Yolculuk"
-        android:textSize="30dp"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        android:layout_marginTop="140dp"
-        android:layout_marginLeft="50dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        tools:ignore="HardcodedText,RtlHardcoded,SpUsage" />
-
-    <TextView
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:text="Android Studio / Kotlin kullanılarak kurulan AndroidS Stüdyosunun kökleri büyük hayalleri olan küçük bir ekibe kadar uzanıyor."
-        android:textSize="20dp"
+        android:textColor="@color/white"
+        android:textSize="40dp"
         android:textStyle="italic"
-        android:layout_marginTop="230dp"
-        android:layout_marginLeft="50dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
         tools:ignore="HardcodedText,RtlHardcoded,SpUsage" />
 
-    <TextView
-        android:layout_width="wrap_content"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="_______________________"
-        android:textSize="30dp"
-        android:textColor="@color/purple_200"
-        android:textStyle="bold"
-        android:layout_marginTop="350dp"
-        android:layout_marginLeft="50dp"
-        android:layout_marginRight="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="70dp"
+        app:cardCornerRadius="28dp">
+
+        <TextView
+            android:layout_width="440dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="45dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="45dp"
+            android:layout_marginRight="50dp"
+            android:text="_______________________________"
+            android:textColor="@color/purple_200"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText,RtlHardcoded,SpUsage" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="30dp"
+            android:text="AndroidS ile Yeni Uygulamalara Yolculuk"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText,RtlHardcoded,SpUsage" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="160dp"
+            android:layout_marginEnd="15dp"
+            android:text="Android Studio / Kotlin kullanılarak kurulan AndroidS Stüdyosunun kökleri büyük hayalleri olan küçük bir ekibe kadar uzanıyor."
+            android:textAlignment="center"
+            android:textSize="21dp"
+            android:textStyle="italic"
+            tools:ignore="HardcodedText,RtlHardcoded,SpUsage" />
+
+        <TextView
+            android:layout_width="428dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="300dp"
+            android:layout_marginEnd="50dp"
+            android:text="_______________________________"
+            android:textColor="@color/purple_200"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText,RtlHardcoded,SpUsage" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="370dp"
+            android:text="PROJELERİMİZ"
+            android:textColor="@color/purple_700"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText,RtlHardcoded,SpUsage" />
+
+        <TextView
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="430dp"
+            android:text="● GymTech, kullanıcıların ve spor salonu sahiplerinin işlerini daha hızlı ve pratik bir şekilde yapabilmelerini sağladık."
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            tools:ignore="HardcodedText,RtlHardcoded,SpUsage" />
+
+        <TextView
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="560dp"
+            android:text="● 2D Platform Oyunu"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            tools:ignore="HardcodedText,RtlHardcoded,SpUsage" />
+
+
+        <TextView
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="620dp"
+            android:layout_marginBottom="20dp"
+            android:text="● 3D Restorant Oyunu"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            tools:ignore="HardcodedText,RtlHardcoded,SpUsage" />
+
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        tools:ignore="HardcodedText,RtlHardcoded,SpUsage" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="PROJELERİMİZ"
-        android:textSize="30dp"
-        android:textColor="@color/purple_700"
-        android:textStyle="bold"
-        android:layout_marginTop="410dp"
-        android:layout_marginLeft="50dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        tools:ignore="HardcodedText,RtlHardcoded,SpUsage" />
-
-    <TextView
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:text="● GymTech, kullanıcıların ve spor salonu sahiplerinin işlerini daha hızlı ve pratik bir şekilde yapabilmelerini sağladık."
-        android:textSize="20dp"
-        android:textColor="@color/black"
-        android:layout_marginTop="480dp"
-        android:layout_marginLeft="50dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        tools:ignore="HardcodedText,RtlHardcoded,SpUsage" />
-
-    <TextView
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:text="● 2D Platform Oyunu"
-        android:textSize="20dp"
-        android:textColor="@color/black"
-        android:layout_marginTop="620dp"
-        android:layout_marginLeft="50dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        tools:ignore="HardcodedText,RtlHardcoded,SpUsage" />
-
-
-    <TextView
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:text="● 3D Restorant Oyunu"
-        android:textSize="20dp"
-        android:textColor="@color/black"
-        android:layout_marginTop="690dp"
-        android:layout_marginLeft="50dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        tools:ignore="HardcodedText,RtlHardcoded,SpUsage" />
-
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="173dp"
+        android:layout_marginTop="820dp"
+        android:layout_marginEnd="167dp"
+        android:layout_marginBottom="1dp"
+        android:src="@drawable/gymtech_logo" />
 </RelativeLayout>

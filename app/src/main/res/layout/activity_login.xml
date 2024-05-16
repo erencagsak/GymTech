@@ -144,15 +144,6 @@
                     android:alpha="0.7"
                     tools:ignore="HardcodedText" />
 
-                <TextView
-                    android:id="@+id/forgotPassword"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Şifremi Unuttum"
-                    android:layout_alignParentEnd="true"
-                    android:layout_centerVertical="true"
-                    tools:ignore="HardcodedText" />
-
             </RelativeLayout>
 
             <View

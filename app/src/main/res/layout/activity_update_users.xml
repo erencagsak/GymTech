@@ -13,6 +13,16 @@
         android:layout_height="match_parent"
         android:background="@color/my_primary"
         android:alpha="0.7">
+
+        <Button
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="7dp"
+            android:layout_marginTop="24dp"
+            android:text="Geri Dön" />
     </RelativeLayout>
 
     <ImageView
@@ -139,11 +149,15 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.536">
 
-                <com.google.android.material.textfield.TextInputEditText
+                <EditText
                     android:id="@+id/userRegisterDate"
                     android:layout_width="330dp"
                     android:layout_height="52dp"
-                    android:inputType="text" />
+                    android:inputType="none"
+                    android:focusable="false"
+                    android:hint="GG/MM/YYYY"
+                    android:onClick="showDatePickerDialog"
+                    tools:ignore="Autofill,HardcodedText,TextFields,UsingOnClickInXml" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <View
@@ -169,11 +183,15 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.536">
 
-                <com.google.android.material.textfield.TextInputEditText
+                <EditText
                     android:id="@+id/userRegisterFinishDate"
                     android:layout_width="330dp"
                     android:layout_height="52dp"
-                    android:inputType="textEmailAddress" />
+                    android:inputType="none"
+                    android:focusable="false"
+                    android:hint="GG/MM/YYYY"
+                    android:onClick="showDatePickerDialog"
+                    tools:ignore="Autofill,HardcodedText,TextFields,UsingOnClickInXml" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <View
@@ -229,7 +247,7 @@
                 android:id="@+id/userMail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="KULLANICI UID"
+                android:text="KULLANICI MAIL"
                 tools:ignore="HardcodedText" />
 
             <View

@@ -595,7 +595,7 @@
                                 android:layout_height="40dp"
                                 android:layout_marginStart="50dp"
                                 android:layout_marginEnd="50dp"
-                                android:text="3 Aylık Üyelik : 9.000 ₺"
+                                android:text="6 Aylık Üyelik : 9.000 ₺"
                                 android:textAlignment="center"
                                 tools:ignore="HardcodedText" />
                         </LinearLayout>
@@ -632,7 +632,7 @@
                                 android:layout_height="40dp"
                                 android:layout_marginStart="50dp"
                                 android:layout_marginEnd="50dp"
-                                android:text="3 Aylık Üyelik : 15.500 ₺"
+                                android:text="12 Aylık Üyelik : 15.500 ₺"
                                 android:textAlignment="center"
                                 tools:ignore="HardcodedText" />
                         </LinearLayout>

@@ -33,6 +33,8 @@ class UsersAdapter(private val userList : ArrayList<Users>)  : RecyclerView.Adap
             intent.putExtra("userName", currentItem.userName)
             intent.putExtra("userSurname", currentItem.userSurname)
             intent.putExtra("userBirthDate", currentItem.userBirthDate)
+            intent.putExtra("userRegisterDate", currentItem.userRegisterDate)
+            intent.putExtra("userRegisterFinishDate", currentItem.userRegisterFinishDate)
             intent.putExtra("userMail", currentItem.userMail)
             intent.putExtra("userUid", currentItem.userUid)
 

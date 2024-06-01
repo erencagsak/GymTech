@@ -5,6 +5,8 @@ import android.content.res.Configuration
 import android.os.Bundle
 import android.os.PersistableBundle
 import android.view.MenuItem
+import android.widget.EditText
+import android.widget.TextView
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
@@ -19,6 +21,10 @@ import com.eren.gymtech.activity.adminPage.fragments.AdminPhoneFragment
 import com.eren.gymtech.activity.adminPage.fragments.AdminPricesFragment
 import com.eren.gymtech.activity.adminPage.fragments.AdminUsersFragment
 import com.eren.gymtech.activity.generalPage.LoginActivity
+import com.eren.gymtech.activity.userPage.fragments.UserAboutUsFragment
+import com.eren.gymtech.activity.userPage.fragments.UserExercisesFragment
+import com.eren.gymtech.activity.userPage.fragments.UserPhoneFragment
+import com.eren.gymtech.activity.userPage.fragments.UserPricesFragment
 import com.eren.gymtech.databinding.ActivityAdminHomeBinding
 import com.google.android.material.navigation.NavigationView
 
@@ -82,7 +88,7 @@ class AdminHomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSe
                 }
             R.id.navPrices ->
                 {
-                    replaceFragments(AdminPricesFragment())
+                    replaceFragments(UserPricesFragment())
 
                     if (drawerLayout.isDrawerOpen(GravityCompat.START))
                     {
@@ -91,7 +97,7 @@ class AdminHomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSe
                 }
             R.id.navExercise ->
                 {
-                    replaceFragments(AdminExercisesFragment())
+                    replaceFragments(UserExercisesFragment())
 
                     if (drawerLayout.isDrawerOpen(GravityCompat.START))
                     {
@@ -100,7 +106,7 @@ class AdminHomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSe
                 }
             R.id.navAboutUs ->
                 {
-                    replaceFragments(AdminAboutUsFragment())
+                    replaceFragments(UserAboutUsFragment())
 
                     if (drawerLayout.isDrawerOpen(GravityCompat.START))
                     {
@@ -109,7 +115,7 @@ class AdminHomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSe
                 }
             R.id.navPhone ->
                 {
-                    replaceFragments(AdminPhoneFragment())
+                    replaceFragments(UserPhoneFragment())
 
                     if (drawerLayout.isDrawerOpen(GravityCompat.START))
                     {

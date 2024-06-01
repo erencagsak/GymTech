@@ -1,60 +1,82 @@
 package com.eren.gymtech.activity.adminPage.fragments
 
+import android.app.DatePickerDialog
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.EditText
+import android.widget.Toast
 import com.eren.gymtech.R
+import com.eren.gymtech.databinding.FragmentUserAccountBinding
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
+import java.util.Calendar
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [AdminAccountFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class AdminAccountFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
+    private lateinit var binding: FragmentUserAccountBinding
+    private lateinit var database: DatabaseReference
+    private val user = FirebaseAuth.getInstance().currentUser
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_admin_account, container, false)
+    ): View {
+        // Use ViewBinding to inflate the layout for this fragment
+        binding = FragmentUserAccountBinding.inflate(inflater, container, false)
+
+        // Set up onClickListener for the update button
+        binding.UpdateDetails.setOnClickListener {
+            val date = binding.UserDate.text.toString()
+            val firstName = binding.UserName.text.toString()
+            val lastName = binding.UserSurname.text.toString()
+            val userUidTextView = binding.userUid // This is a TextView, not a String
+            val userID = user?.uid
+
+            if (userID != null) {
+                userUidTextView.text = userID
+                updateData(date, userID, firstName, lastName)
+            } else {
+                userUidTextView.text = "User ID mevcut değil"
+                Toast.makeText(context, "Kullanıcı ID mevcut değil.", Toast.LENGTH_SHORT).show()
+            }
+        }
+
+        binding.UserDate.setOnClickListener{
+            showDatePickerDialog(it)
+        }
+
+        return binding.root
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment AdminAccountFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            AdminAccountFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
+    private fun updateData(date : String, userUid : String, firstName: String, lastName: String) {
+        database = FirebaseDatabase.getInstance().getReference("Users")
+        val user = mapOf<String,String>(
+            "userBirthDate" to date,
+            "userName" to firstName,
+            "userSurname" to lastName
+        )
+        database.child(userUid).updateChildren(user).addOnSuccessListener {
+            binding.UserName.text?.clear()
+            binding.UserSurname.text?.clear()
+            binding.UserDate.text?.clear()
+        }
+    }
+
+    fun showDatePickerDialog(view: View) {
+        val context = requireContext() // or use getContext() if you prefer
+        val datePickerDialog = DatePickerDialog(
+            context,
+            { _, year, month, dayOfMonth ->
+                val formattedDate = String.format("%02d/%02d/%04d", dayOfMonth, month + 1, year)
+                (view as EditText).setText(formattedDate)
+            },
+            Calendar.getInstance().get(Calendar.YEAR),
+            Calendar.getInstance().get(Calendar.MONTH),
+            Calendar.getInstance().get(Calendar.DAY_OF_MONTH)
+        )
+        datePickerDialog.show()
     }
 }
